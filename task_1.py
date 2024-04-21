@@ -8,7 +8,7 @@ def get_days_from_today(data: str) -> int:
         print(f"{data} is not a valid string. Expected date in format '%Y-%m-%d'.")
 
     
-
-# print(get_days_from_today("2021-10-09"))
-# print(get_days_from_today("2021.10.09"))
-# print(get_days_from_today(""))
+if __name__ == '__main__':
+    print(get_days_from_today("2021-10-09"))
+    print(get_days_from_today("2021.10.09"))
+    print(get_days_from_today(""))

@@ -19,13 +19,14 @@ def get_numbers_ticket(min: int, max: int, quantity: int) -> list:
         return sorted(sample(range(validate_input_numbers(min), validate_input_numbers(max)), validate_input_numbers(quantity)))
 
     except ValueError as e:
-        print(f"min, max or quantity is not a valid number. Expected number beetwen 1 and 1000!")
+        print(f"{e.args[0]} is not a valid number of min, max or quantity. Expected number beetwen 1 and 1000!")
     except TypeError as e:
         print(f"min, max or quantity is not a number. Please input a number beetwen 1 and 1000!")
 
     # return  sorted(list(result_set))
 
-print(get_numbers_ticket(1, 1000, 10))
-print(get_numbers_ticket(0, 1000, 10))
-print(get_numbers_ticket("1", 1000, 10))
-print(get_numbers_ticket(10, None, 100))
+if __name__ == '__main__':
+    print(get_numbers_ticket(1, 1000, 10))
+    print(get_numbers_ticket(0, 1000, 10))
+    print(get_numbers_ticket("1", 1000, 10))
+    print(get_numbers_ticket(10, None, 100))
