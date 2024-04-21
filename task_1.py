@@ -5,7 +5,7 @@ def get_days_from_today(data: str) -> int:
     try:
         return (datetime.today().date() - datetime.strptime(data, "%Y-%m-%d").date()).days
     except ValueError:
-        print(f"{data} is not a valid string. Waiting format %Y-%m-%d")
+        print(f"{data} is not a valid string. Expected date in format '%Y-%m-%d'.")
 
     
 
